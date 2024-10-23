@@ -1,6 +1,6 @@
 # Image Quality Analysis (IQA) in Python
 
-A simple test codes for IQA with Python
+Simple test codes for IQA with Python
 - BRISQUE
 - SIMM
 
