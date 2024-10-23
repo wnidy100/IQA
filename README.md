@@ -1,6 +1,8 @@
-# Image Quality Analysis (IQA) using BRISQUE in Python
+# Image Quality Analysis (IQA) in Python
 
-A simple test code for BRISQUE with Python
+A simple test codes for IQA with Python
+- BRISQUE
+- SIMM
 
 ## Requirements
 
