@@ -1,7 +1,6 @@
 import cv2
 import copy
 import numpy as np
-import imquality.brisque as brisque
 
 
 # 0 <= th < 1
@@ -21,14 +20,15 @@ def get_noisy_img(origin_img, th=0.7):
     return img
 
 
-origin_img = cv2.imread('highq.jpg')
+origin_img = cv2.imread("highq.jpg")
+origin_mse_score = np.square(np.subtract(origin_img, origin_img)).mean()
+
 noisy_img = get_noisy_img(origin_img)
+noisy_mse_score = np.square(np.subtract(origin_img, noisy_img)).mean()
+
 blurred_img = cv2.GaussianBlur(origin_img, (0, 0), 5)
+blurred_mse_score = np.square(np.subtract(origin_img, blurred_img)).mean()
 
-# cv2.imshow("noisy img", noisy_img)
-# cv2.imshow("blurred img", blurred_img)
-# cv2.waitKey(0)
-
-print("BRISQUE with original:", brisque.score(origin_img))
-print("BRISQUE with blurred:", brisque.score(blurred_img))
-print("BRISQUE with noisy:", brisque.score(noisy_img))
+print("MSE with original:", origin_mse_score)
+print("MSE with blurred:", blurred_mse_score)
+print("MSE with noisy:", noisy_mse_score)
