@@ -1,11 +1,13 @@
-import imquality.brisque as brisque
 import cv2
+import copy
 import numpy as np
+import imquality.brisque as brisque
 
 
 # 0 <= th < 1
 # The smaller the 'th', the noiser the image
-def get_noisy_img(img, th=0.7):
+def get_noisy_img(origin_img, th=0.7):
+    img = copy.copy(origin_img)
     h, w, c = img.shape
 
     for k in range(c):
