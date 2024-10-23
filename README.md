@@ -1,1 +1,2 @@
-A simple BRISQUE test code.
+Image Quality Analysis(IQA) test codes with Python.
+- BRISQUE
