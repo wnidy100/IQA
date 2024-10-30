@@ -3,6 +3,8 @@
 Simple test codes for IQA with Python
 - BRISQUE
 - SIMM
+- PSNR
+- MSE
 
 ## Requirements
 
